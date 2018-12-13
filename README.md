@@ -1,31 +1,5 @@
 # zxing
-一句话依赖就能实现扫一扫功能，包含闪光灯开关，选取本地图片解析，生成二维码(可带logo)功能等。
-
-更新日志：
-https://github.com/yuzhiqiang1993/zxing/wiki/update-log
-
-博客： http://blog.csdn.net/yuzhiqiang_1993/article/details/78292004
-
-
-扫描二维码下载APK体验一下
-========
-![扫描二维码](https://github.com/yuzhiqiang1993/zxing/blob/master/img/downloadApk.png "扫描下载APK")
-
-
-首先来看看效果图
-========
-
-
-下图分别为 扫描二维码，扫描条码，闪光灯，解析二维码图片，解析条码图片，生成二维码,修改扫描框四个角的颜色，修改扫描框边线颜色
-------------------------
-![扫描二维码](https://github.com/yuzhiqiang1993/zxing/blob/master/img/scanEwm.gif "扫描二维码")
-![扫描条码](https://github.com/yuzhiqiang1993/zxing/blob/master/img/scanTm.gif "扫描条码")
-![闪光灯](https://github.com/yuzhiqiang1993/zxing/blob/master/img/flashlight.gif "闪光灯")
-![解析二维码图片](https://github.com/yuzhiqiang1993/zxing/blob/master/img/decodeEWM.gif "解析二维码图片")
-![解析条码图片](https://github.com/yuzhiqiang1993/zxing/blob/master/img/decodeTM.gif "解析条码图片")
-![生成二维码图片](https://github.com/yuzhiqiang1993/zxing/blob/master/img/createEwm.gif "生成二维码图片")
-![修改边角颜色](https://github.com/yuzhiqiang1993/zxing/blob/master/img/edit_react_color.gif "修改边角颜色")
-![修改边线颜色](https://github.com/yuzhiqiang1993/zxing/blob/master/img/edit_frameline_color.gif "修改边线颜色")
+一句话依赖就能实现扫一扫功能，包含闪光灯开关，选取本地图片解析功能。
 
 >
 使用方法
@@ -143,34 +117,3 @@ startActivityForResult(intent, REQUEST_CODE_SCAN);
 
 ```
 
-
-5.生成二维码
--------------------------------
-```
-                String contentEtString = contentEt.getText().toString().trim();
-                
-                if (TextUtils.isEmpty(contentEtString)) {
-                    Toast.makeText(this, "contentEtString不能为空", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                Bitmap bitmap = null;
-                try {
-                    /*
-                    * contentEtString：字符串内容
-                    * w：图片的宽
-                    * h：图片的高
-                    * logo：不需要logo的话直接传null
-                    * */
-
-                    Bitmap logo = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-                    bitmap = CodeCreator.createQRCode(contentEtString, 400, 400, logo);
-                } catch (WriterException e) {
-                    e.printStackTrace();
-                }
-                
-
-```
->
-
-ok,搞定了，就是这么简单，如果你觉得还行的话，麻烦给个start呦，有什么问题和建议直接提Issues,谢谢。
---------------------------
