@@ -32,17 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button scanBtn;
     private TextView result;
-    private EditText contentEt;
-    private Button encodeBtn;
-    private ImageView contentIv;
     private Toolbar toolbar;
     private int REQUEST_CODE_SCAN = 111;
-    /**
-     * 生成带logo的二维码
-     */
-    private Button encodeBtnWithLogo;
-    private ImageView contentIvWithLogo;
-    private String contentEtString;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
