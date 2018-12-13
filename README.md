@@ -20,26 +20,11 @@ allprojects {
 }
 ```
 
-然后在 build.gradle(Module:app) 的 dependencies 添加:
-
-最新版本：https://github.com/yuzhiqiang1993/zxing/releases
-
- ```
- dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    
-    /*添加依赖*/
-    implementation 'com.github.yuzhiqiang1993:zxing:2.2.0'
-}
-
- 
- ```
  
  2.权限
  --------------
  
- demo使用的权限申请是严大的一个开源库，地址：https://github.com/yanzhenjie/AndPermission 感谢严大！
+ demo使用的权限申请是严大的一个开源库，地址：https://github.com/yanzhenjie/AndPermission 
  
  需要申请的权限有：
  
